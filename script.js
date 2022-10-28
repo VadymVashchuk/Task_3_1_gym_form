@@ -37,3 +37,5 @@ function clearAll () {
   clientWeight.value = "";
   clientHeight.value = "";
 }
+
+//hdglsjkgjnalkglg;kag
