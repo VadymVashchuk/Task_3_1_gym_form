@@ -7,8 +7,6 @@ const newClient = {
   clientHeight: document.getElementById('clientHeight'),
 }
 
-sendData.addEventListener("click", registration);
-
 function registration() {
   let nameValue = newClient.clientName.value;
   let ageValue = newClient.clientAge.value;
@@ -17,7 +15,7 @@ function registration() {
 
   let baseErrorMessage = ", ми змушені повідомити, що Ви не зможете відвідувати наш зал"
 
-  if (nameValue == 0 || ageValue == 0 || weightValue == 0 || heightValue == 0) {
+  if (!nameValue || !ageValue || weightValue === "" || heightValue === "") {     // Тут використано два варіанти задання цієї умови
     alert("Будь ласка, заповніть форму до кінця!");
     return;
   } else if (ageValue < 18 || ageValue > 60) {
