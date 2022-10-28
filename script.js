@@ -1,16 +1,19 @@
-const clientName = document.getElementById('clientName');
-const clientAge = document.getElementById('clientAge');
-const clientWeight = document.getElementById('clientWeight');
-const clientHeight = document.getElementById('clientHeight');
 const sendData = document.getElementById('sendData');
+
+const newClient = {
+  clientName: document.getElementById('clientName'),
+  clientAge: document.getElementById('clientAge'),
+  clientWeight: document.getElementById('clientWeight'),
+  clientHeight: document.getElementById('clientHeight'),
+}
 
 sendData.addEventListener("click", registration);
 
-function registration () {
-  let nameValue = clientName.value;
-  let ageValue = clientAge.value;
-  let weightValue = clientWeight.value;
-  let heightValue = clientHeight.value;
+function registration() {
+  let nameValue = newClient.clientName.value;
+  let ageValue = newClient.clientAge.value;
+  let weightValue = newClient.clientWeight.value;
+  let heightValue = newClient.clientHeight.value;
 
   let baseErrorMessage = ", ми змушені повідомити, що Ви не зможете відвідувати наш зал"
 
@@ -28,14 +31,12 @@ function registration () {
   } else {
     alert("Вітаємо, " + nameValue + "! Ви зареєстровані.");
   }
-  clearAll ();
+  clearAll();
 }
 
-function clearAll () {
-  clientName.value = "";
-  clientAge.value = "";
-  clientWeight.value = "";
-  clientHeight.value = "";
+function clearAll() {
+  newClient.clientName.value = "";
+  newClient.clientAge.value = "";
+  newClient.clientWeight.value = "";
+  newClient.clientHeight.value = "";
 }
-
-//hdglsjkgjnalkglg;kag
